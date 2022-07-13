@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n6qCalv3lr1VIwyOUBf3jUT6605rIfzVs8I6AHgxhNVBRZbb8435NCJ0eul9BXf0lNCLV+5tpUnyHA2S+MGAfw==",
+  "success": true,
+  "projectFilePath": "G:\\tu nic nie ma\\c#\\Czwiczenia1\\Czwiczenia1\\Czwiczenia1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
