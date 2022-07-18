@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\tu nic nie ma\\c#\\Ćwiczenia2\\Ćwiczenia2\\Ćwiczenia2.csproj",
+      "projectUniqueName": "G:\\tu nic nie ma\\c#\\temp\\temp\\Ćwiczenia2\\Ćwiczenia2\\Ćwiczenia2.csproj",
       "projectName": "Ćwiczenia2",
-      "projectPath": "G:\\tu nic nie ma\\c#\\Ćwiczenia2\\Ćwiczenia2\\Ćwiczenia2.csproj",
+      "projectPath": "G:\\tu nic nie ma\\c#\\temp\\temp\\Ćwiczenia2\\Ćwiczenia2\\Ćwiczenia2.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "G:\\tu nic nie ma\\c#\\Ćwiczenia2\\Ćwiczenia2\\obj\\",
+      "outputPath": "G:\\tu nic nie ma\\c#\\temp\\temp\\Ćwiczenia2\\Ćwiczenia2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

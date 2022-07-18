@@ -324,21 +324,62 @@ namespace Ćwiczenia2
         //    {
         //        Console.WriteLine(words[i]);
         //    }
-
-
         //}
 
+        //static void Main(string[] args)
+        //{
+        //    //Dla podanego tekstu utwórz tablicę zawierającą słowa z tego tekstu
+        //    string[] zdanie = new string[20];
+        //    zdanie[0] = "Dla";
+        //    zdanie[1] = " ";
+        //    zdanie[2] = "podanego";
+        //    zdanie[3] = " ";
+        //    zdanie[4] = "tekstu";
+        //    zdanie[5] = " ";
+        //    zdanie[6] = "utwórz";//i tak dalej, chyba o czymś nie wiem albo zabieram się do tego źle.
+        //}
+
+
+        //--------------------------
+        //Zadanie 1 // dodatkowe
+        //--------------------------
+        //static void Main(string[] args)
+        //{
+        //    int[] dane = new int[200];
+        //    int suma = 0;
+
+        //    for(int i = 0; i < 200; i++)
+        //    {
+        //        dane[i] = i+1;
+        //    }
+
+        //    foreach(int i in dane)
+        //    {
+        //        suma += i;
+        //    }
+
+        //    Console.WriteLine("Suma liczb od 1 do 200 wynosi: " + suma);
+        //}
+
+        //--------------------------
+        //Zadanie 2 // dodatkowe
+        //--------------------------
         static void Main(string[] args)
         {
-            //Dla podanego tekstu utwórz tablicę zawierającą słowa z tego tekstu
-            string[] zdanie = new string[20];
-            zdanie[0] = "Dla";
-            zdanie[1] = " ";
-            zdanie[2] = "podanego";
-            zdanie[3] = " ";
-            zdanie[4] = "tekstu";
-            zdanie[5] = " ";
-            zdanie[6] = "utwórz";//i tak dalej, chyba o czymś nie wiem albo zabieram się do tego źle.
+            int[] dane = new int[200];
+            int suma = 0;
+
+            for (int i = 0; i < 200; i++)
+            {
+                dane[i] = i + 1;
+            }
+
+            foreach (int i in dane)
+            {
+                suma += i;
+            }
+
+            Console.WriteLine("Suma liczb od 1 do 200 wynosi: " + suma);
         }
     }
 }
