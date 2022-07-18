@@ -364,22 +364,28 @@ namespace Ćwiczenia2
         //--------------------------
         //Zadanie 2 // dodatkowe
         //--------------------------
-        static void Main(string[] args)
-        {
-            int[] dane = new int[200];
-            int suma = 0;
+        //static void Main(string[] args)
+        //{
+        //    int[] liczby = new int[50];
+        //    int sumaParzyste = 0;
+        //    int sumaNieParzyste = 0;
 
-            for (int i = 0; i < 200; i++)
-            {
-                dane[i] = i + 1;
-            }
+        //    for (int i = 0; i < 50; i++)
+        //    {
+        //        liczby[i] = i + 1;
+        //    }
 
-            foreach (int i in dane)
-            {
-                suma += i;
-            }
+        //    foreach (int i in liczby)
+        //    {
+        //        if (i % 2 == 0)
+        //        {
+        //            sumaParzyste += i;
+        //        }
+        //        else sumaNieParzyste += i;
+        //    }
 
-            Console.WriteLine("Suma liczb od 1 do 200 wynosi: " + suma);
-        }
+        //    Console.WriteLine("Suma liczb parzystych od 1 do 50 wynosi: " + sumaParzyste);
+        //    Console.WriteLine("Suma liczb nieparzystych od 1 do 50 wynosi: " + sumaNieParzyste);
+        //}
     }
 }
