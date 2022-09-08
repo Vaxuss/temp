@@ -48,12 +48,13 @@ namespace Narzedzia
             {
                 if (!rep)
                 {
-                    int pozycja = r.Next(arr.Length,1);
+                    int pozycja = r.Next(arr.Length);
                     Console.WriteLine(arr[pozycja]);
                 }
                 else
                 {
-                    temp.Add(r.Next(arr.Length, 1));
+                    int pozycja = r.Next(arr.Length);
+                    temp.Add(pozycja);
                     for(int j = 0; j < temp.Count; j++)
                     {
                         for(int k = 0; k < temp.Count; k++)
@@ -77,12 +78,12 @@ namespace Narzedzia
         static void Main(string[] args)
         {
             RandomUtility ru = new RandomUtility();
-            Console.WriteLine(ru.RandomInt(1, 5));
-            Console.WriteLine(ru.RandomDouble(1, 1));
+            Console.WriteLine(ru.RandomInt(1, 10));
+            Console.WriteLine(ru.RandomDouble(1, 10));
             Console.WriteLine(ru.RandomDecimal(1));//nie wiem dokładnie jak to zrobić ponieważ liczby dziesiętne to int'y więc zrobiłem że znawsze jest mniejsze niż 0
             Console.WriteLine(ru.RandomString(10));
             int[] arr = { 1,2,3,4,5,6 };
-            ru.RandomFromArray(5, arr, false);
+            ru.RandomFromArray(5, arr, true);
             Console.ReadKey();
         }
     }
