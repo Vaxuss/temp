@@ -1,0 +1,8 @@
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\bin\Debug\Cwiczenia 5.exe.config
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\bin\Debug\Cwiczenia 5.exe
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\bin\Debug\Cwiczenia 5.pdb
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\obj\Debug\Cwiczenia 5.csproj.AssemblyReference.cache
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\obj\Debug\Cwiczenia 5.csproj.SuggestedBindingRedirects.cache
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\obj\Debug\Cwiczenia 5.csproj.CoreCompileInputs.cache
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\obj\Debug\Cwiczenia 5.exe
+G:\tu nic nie ma\c#\temp\temp\Cwiczenia 5\Cwiczenia 5\obj\Debug\Cwiczenia 5.pdb

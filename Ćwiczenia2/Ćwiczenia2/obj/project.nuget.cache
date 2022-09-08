@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j290gqiB9gsOiWLFuOZcdmkOxaELnfyMLaTsQ5UykHc7by/NcdINvWr55dqo1Jrj5O37TznUqeJKpJHo43K8bg==",
+  "dgSpecHash": "ABalvokRpNdQ9hcjPxl/6lEsnlvUJ8Oe+1mY3KoQAwRp2JSqP7N8LEoQ3FrJw/oEe2gJhbVdkPmRrCpsVdz+3Q==",
   "success": true,
   "projectFilePath": "G:\\tu nic nie ma\\c#\\temp\\temp\\Ćwiczenia2\\Ćwiczenia2\\Ćwiczenia2.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
