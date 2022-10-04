@@ -16,6 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from first_app.views import hello, hello_name, add, multiply, bros, fibb, game, hellopath, article, greetings, calc, \
+    rand_gen, index, form, fizz_buzz, rpg, list_comment, main
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('article/<int:id>', article),
+    path('greetings/<str:name>/<int:repeat>', greetings),
+    path('rand_gen/<int:min>/<int:max>', rand_gen),
+    path('rand_gen/<int:min>/<int:max>/<int:throw>', rand_gen),
+    path('calc/<int:number_a>/<str:operation>/<int:number_b>', calc),
+    path('', index),
+    path('form/', form),
+    path('fizzbum/<int:n>', fizz_buzz),
+    #path('hellopath/<str:name>', hellopath),
+    path('multiply/<int:n>', multiply),
+    path('rpg/', rpg),
+    path('fake_comments/', list_comment),
+    path('main/', main),
+
 ]

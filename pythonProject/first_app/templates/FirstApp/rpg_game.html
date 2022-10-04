@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<table name="player">
+    <b>Player</b>
+    <tr>
+        <td>Player name: </td><td>Player1</td>
+    </tr>
+    <tr>
+        <td>Player Attack: </td> <td>{{ pAttack }}</td>
+    </tr>
+    <tr>
+        <td>Player Defense: </td> <td>{{ pDefense }}</td>
+    </tr>
+    <tr>
+        <td>Player weapon: </td> <td>Greatsword</td>
+    </tr>
+    <tr>
+        <td>Player life: </td> <td>{{ Php }}</td>
+    </tr>
+</table>
+
+<table name="enemy">
+    <b>Enemy</b>
+    <tr>
+        <td>Enemy name: </td><td>BBEG</td>
+    </tr>
+    <tr>
+        <td>Enemy Attack: </td> <td>{{ eAttack }}</td>
+    </tr>
+    <tr>
+        <td>Enemy Defense: </td> <td>{{ eDefense }}</td>
+    </tr>
+    <tr>
+        <td>Enemy weapon: </td> <td>Mace</td>
+    </tr>
+    <tr>
+        <td>Enemy life: </td> <td>{{ Ehp }}</td>
+    </tr>
+</table>
+<table>
+    {{ stats }}
+    <p><h2>{{ wygrana | linebreaks }}</h2></p>
+</table>
+</body>
+</html>

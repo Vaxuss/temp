@@ -33,6 +33,3 @@ for i in names:
         names_len[len(i)] = [i]
 print(names_len)"""
 
-urlpatterns ={
-    path('admin/', admin.site.urls),
-}
