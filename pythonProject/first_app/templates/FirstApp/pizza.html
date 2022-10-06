@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method = "post">
+        Oliwki <input type="checkbox" name = "part" value="oliwki">
+        Podwójny ser<input type="checkbox" name = "part" value="podwójny ser">
+        Grube ciasto<input type="checkbox" name = "part" value="grube ciasto">
+        Ananas<input type="checkbox" name = "part" value="ananas">
+        <input type="submit">
+        {% csrf_token %}
+    </form>
+</body>
+</html>

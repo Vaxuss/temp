@@ -14,25 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.contrib.auth import login
+from django.urls import path, include
 
-from first_app.views import hello, hello_name, add, multiply, bros, fibb, game, hellopath, article, greetings, calc, \
-    rand_gen, index, form, fizz_buzz, rpg, list_comment, main
+from gadugadu_app.views import *
+from games_app.views import *
+from first_app.views import *
+from library_app.views import *
+from shorapp.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('article/<int:id>', article),
-    path('greetings/<str:name>/<int:repeat>', greetings),
-    path('rand_gen/<int:min>/<int:max>', rand_gen),
-    path('rand_gen/<int:min>/<int:max>/<int:throw>', rand_gen),
-    path('calc/<int:number_a>/<str:operation>/<int:number_b>', calc),
-    path('', index),
-    path('form/', form),
-    path('fizzbum/<int:n>', fizz_buzz),
-    #path('hellopath/<str:name>', hellopath),
-    path('multiply/<int:n>', multiply),
-    path('rpg/', rpg),
-    path('fake_comments/', list_comment),
-    path('main/', main),
+    path('', include("first_app.urls")),
+    path('', include("games_app.urls")),
+    path('lib/', include("library_app.urls")),
+    path('wiadomosc/', wiadomosc),
+    path('gg/form', ShowFormView.as_view()),
+    path('football', ShowFormView.as_view()),
 
 ]

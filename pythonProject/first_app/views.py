@@ -1,7 +1,40 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views import View
 import random as rand
 from . import fake_data
+
+class FormView(View):
+    def get(self, request):
+        return HttpResponse('jesteśmy w metodzie GET')
+    def post(self, request):
+        return HttpResponse('jesteśmy w POST')
+
+class PizzaView(View):
+    def get(self, request):
+        return render(request, 'FirstApp/pizza.html')
+    def post(self, request):
+        dodatki = request.POST.getlist('part', '')
+        return HttpResponse(", ".join(dodatki))
+
+class CarView(View):
+    def get(self, request):
+        return render(request, 'FirstApp/car.html')
+    def post(self, request):
+        wybor = request.POST.get('wybor', '')
+        return HttpResponse(wybor)
+
+class LoginView(View):
+    def get(self, request):
+        return render(request, 'FirstApp/login_class.html')
+    def post(self, request):
+        if request.POST.get('login', '') == 'admin' and request.POST.get('pass', '') == 'Tajne123':
+            return HttpResponse("Witaj Admin!", "Brak Parametru")
+        else:
+            return redirect('/login/?message="zly login lub haslo"')
+
+
+
 
 def hello(request):
     return HttpResponse('Hello')
@@ -195,3 +228,24 @@ def list_comment(request):
 
 def main(request):
     return render(request, 'FirstApp/base.html')
+
+def login_user(request, message="ok" ):
+    if request.method == 'GET':
+        return render(request, 'FirstApp/login.html')
+    if request.method == 'POST':
+        if request.POST.get('login', '') == 'Admin' and request.POST.get('pass', '') == 'Tajne123':
+            return HttpResponse("Witaj Admin!", "Brak Parametru")
+        else:
+            return redirect('/login/?message="zly login lub haslo"')
+
+products = {}
+
+def add_product(request):
+    if request.method == 'GET':
+        return render(request, 'FirstApp/add_product_form.html')
+    if request.method == 'POST':
+        products[request.POST.get('product', '')] = request.POST.get('price', '')
+        return redirect('/show_product')
+
+def show_products(request):
+    return render(request, 'FirstApp/show_product.html', context={'products': products})
