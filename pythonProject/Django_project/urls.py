@@ -32,5 +32,5 @@ urlpatterns = [
     path('wiadomosc/', wiadomosc),
     path('gg/form', ShowFormView.as_view()),
     path('football', ShowFormView.as_view()),
-
+    path('rpg/', include("rpg_app.urls"))
 ]
