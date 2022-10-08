@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    function FormCheck(){
+        let host_team = document.getElementById('id_host_team').value;
+        let guest_team = document.getElementById('id_guest_team').value;
+        let host_score = document.getElementById('host_score').value;
+        let guest_score = document.getElementById('guest_score').value;
+        console.log(host_team);
+        if(host_team == guest_team) {
+            document.getElementById('message').innerHTML = "Zmień jedną z drużyn";
+            document.getElementById('send').disabled = true;
+        }
+        if(host_team != guest_team){
+            document.getElementById('message').innerHTML = "";
+            document.getElementById('send').disabled = false;
+        }
+        if(guest_score < 0 || host_score < 0){
+            document.getElementById('message').innerHTML = "Wynik nie może być ujemny";
+            document.getElementById('send').disabled = true;
+        }
+        if(guest_score >= 0 && host_score >= 0){
+            document.getElementById('send').disabled = false;
+        }
+    }
+</script>
+    <style>
+
+    </style>
+</head>
+<body>
+ <form method="post" onchange="FormCheck()">
+     <p>{{ form }}</p>
+     <input type="submit" id = 'send'>
+     {% csrf_token %}
+ </form>
+<div id = 'message'></div>
+</body>
+</html>

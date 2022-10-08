@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "{% static 'games_app/../static/games_app/style.css' %}">
+</head>
+<body>
+<form>
+    <a id = "back" href = "/game/add">Dodaj</a>
+</form>
+{% block main %}
+<table>
+    <tr>
+        <td>Tytuł</td>
+        <td>Platforma</td>
+        <td>Edytuj</td>
+        <td>Usun</td>
+    </tr>
+    {% for game in games %}
+        <tr>
+            <td><a href="/game/show/{{ game.pk }}">{{ game.name }}</a></td>
+            <td><a href="/game/platform/{{ game.platform.name }}">{{ game.platform.name }}</a></td>
+            <td><a href="/game/edit/{{ game.pk }}">Edit</a></td>
+            <td><a href="/game/del/{{ game.pk }}">Del</a></td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+</body>
+</html>

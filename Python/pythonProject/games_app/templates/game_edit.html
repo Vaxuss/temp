@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "{% static 'games_app/../static/games_app/style.css' %}">
+</head>
+<body>
+<a id = "back" href = "/game/">BACK</a><br>
+<br>
+<form method="post">
+    <table>
+        <tr>
+            <td>Nazwa</td>
+            <td>Opis</td>
+            <td>Platforma</td>
+            <td>Ocena</td>
+            <td>Cena</td>
+        </tr>
+        <tr>
+            <td><input type="text" name = "nazwa" value="{{ game.name }}"></td>
+            <td><input type="text" name = "opis" value="{{ game.description }}"></td>
+            <td>
+                <select name = "platforma">
+                    {% for i in platform %}
+                        {% if i.name == game.platform.name %}
+                            <option selected>{{ i.name }}</option>
+                        {% else %}
+                            <option>{{ i.name }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </td>
+            <td><input type="number" name = "ocena" value="{{ game.rating }}"></td>
+            <td><input type="number" name = "cena" value="{{ game.price }}"></td>
+        </tr>
+    </table>
+    <input type="submit">
+    {% csrf_token %}
+</form>
+</body>
+</html>

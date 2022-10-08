@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "{% static 'first_app/../../static/first_app/../../static/first_app/../../static/first_app/style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+    {% block logo %}
+        <h1>Logo</h1>
+    {% endblock %}
+    {% block main %}
+        <p>tresc</p>
+    {% endblock %}
+    {% block footer %}
+    footer
+    {% endblock %}
+</body>
+</html>

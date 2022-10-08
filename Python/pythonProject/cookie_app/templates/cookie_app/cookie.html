@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        Key: <input type="text" name="key">
+        Value: <input type="text" name="val">
+        <input type="submit" value="{{ message }}">
+        {% csrf_token %}
+    </form>
+</body>
+</html>

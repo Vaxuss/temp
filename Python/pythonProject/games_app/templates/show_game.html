@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "{% static 'games_app/../static/games_app/style.css' %}">
+    <style>
+        table{
+            border: solid;
+            border-width: 1px;
+            border-collapse: collapse;
+        }
+        td{
+            border: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+<body>
+<a id = "back" href = "/game/">BACK</a><br>
+    <table>
+        <tr>
+            <td>Tytuł</td>
+            <td>Opis</td>
+            <td>Platforma</td>
+            <td>Ocena</td>
+            <td>Cena</td>
+        </tr>
+        <tr>
+            <td>{{ game.name }}</td>
+            <td>{{ game.description }}</td>
+            <td>{{ game.platform.name }}</td>
+            <td>{{ game.rating }}</td>
+            <td>{{ game.price }}</td>
+        </tr>
+    </table>
+</body>
+</html>
