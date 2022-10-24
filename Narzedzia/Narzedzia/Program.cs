@@ -46,28 +46,25 @@ namespace Narzedzia
             bool powtorzenie = false;
             for(int i = 0; i < n; i++)
             {
-                if (!rep)
+                if (rep == false)
                 {
-                    int pozycja = r.Next(arr.Length);
+                    int pozycja = r.Next(0, arr.Length);
                     Console.WriteLine(arr[pozycja]);
                 }
                 else
                 {
-                    int pozycja = r.Next(arr.Length);
-                    temp.Add(pozycja);
+                    int pozycja = r.Next(0, arr.Length);
                     for(int j = 0; j < temp.Count; j++)
                     {
-                        for(int k = 0; k < temp.Count; k++)
+                        if (temp[j] == arr[pozycja])
                         {
-                            if (temp[j] == temp[k])
-                            {
-                                powtorzenie = true;
-                            }
+                            powtorzenie = true;
                         }
                     }   
                     if(powtorzenie == false)
                     {
-                        Console.WriteLine(temp[i]);
+                        Console.WriteLine(arr[pozycja]);
+                        temp.Add(arr[pozycja]);
                     }
                 }
             }
