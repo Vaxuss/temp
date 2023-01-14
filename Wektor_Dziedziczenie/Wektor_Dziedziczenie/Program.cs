@@ -8,7 +8,7 @@ namespace Wektor_Dziedziczenie
 {
     public class Wektor
     {
-        int n;
+        public int n;
         double[] dane;
         double suma = 0.0;
 
@@ -48,13 +48,20 @@ namespace Wektor_Dziedziczenie
             n = n + w.n;
         }
     }
+
+    public class Wielomian : Wektor
+    {
+        double suma = 0.0;
+        public Wielomian(double dane[], Wektor w) : base(w.n);
+    }
+
     internal class Program
     {
         static void Main(string[] args)
         {
             double[] dane = new double[2];
-            dane[0] = 1.5;
-            dane[1] = 1.5;
+            dane[0] = 5;
+            dane[1] = 3;
             Wektor wektor = new Wektor(2, dane);
             wektor.show();
             Wektor w2 = new Wektor(2, dane);
